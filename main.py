@@ -6,4 +6,4 @@ app = FastAPI()
 @app.get("/product/{handle}")
 async def get_product(handle: str):
     # Query Shopify here
-    return 'Yes'
+    return {"product_availability": "Yes"}
