@@ -1,11 +1,11 @@
-# mayan consulting - farmacios ramos agente
+# super arigato - shop agente
 
 ## v1.1.1
 
 * redis -> https://cloud.redis.io/#/login
 * IBM Cloud
 * Render 
-* Salesforce
+* Shopify
 
 ## Nota
 

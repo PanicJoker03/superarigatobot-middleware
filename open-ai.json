@@ -2,12 +2,12 @@
     "openapi": "3.0.0",
     "info": {
         "title": "Watson Assistant FastAPI Extension",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "description": "Extension for sending a user message from Watson Assistant to a FastAPI service."
     },
     "servers": [
         {
-            "url": "https://laboratorios-ramos-agent-fast-api.onrender.com"
+            "url": "https://superarigatobot-middleware.onrender.com"
         }
     ],
     "paths": {
