@@ -72,6 +72,49 @@
                 }
             }
         },
+        "/product/{handle}": {
+            "get": {
+                "operationId": "get_product",
+                "summary": "Retrieve product availability",
+                "description": "Checks the approximate availability of a product in Shopify using its handle.",
+                "parameters": [
+                    {
+                        "name": "handle",
+                        "in": "path",
+                        "required": true,
+                        "description": "The unique handle (slug) of the product.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Availability successfully retrieved.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product_availability": {
+                                            "type": "string",
+                                            "description": "The approximate availability status of the product."
+                                        }
+                                    },
+                                    "required": ["product_availability"]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error (e.g., missing handle)."
+                    },
+                    "500": {
+                        "description": "FastAPI server error."
+                    }
+                }
+            }
+        },
         "/quotation": {
             "get": {
                 "operationId": "getQuotation",
