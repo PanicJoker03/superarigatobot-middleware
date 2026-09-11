@@ -1,3 +1,13 @@
 fastapi
 uvicorn
 requests
+anthropic
+redis
+pandas
+sqlalchemy
+psycopg2
+numpy
+reportlab
+pdf2image
+twilio
+python-multipart

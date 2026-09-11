@@ -1,0 +1,32 @@
+{
+  "laboratorio": {
+    "nombre": "Laboratorio Alfonso Ramos S.A. de C.V.",
+    "logo_texto_linea1": "Laboratorio",
+    "logo_texto_linea2": "Ramos"
+  },
+  "folio": "26081818035",
+  "fecha": "18/08/2026",
+  "estudios": [
+    {
+      "clave": "1",
+      "nombre": "CITOLOGIA HEMATICA",
+      "precio_lista": 250.00,
+      "descuento": 0.00,
+      "precio_final": 250.00,
+      "indicaciones": "Presentarse en el laboratorio con un ayuno de 8 - 10 horas."
+    },
+    {
+      "clave": "PBQ24",
+      "nombre": "PERFIL BIOQUIMICO 24 ELEMENTOS",
+      "precio_lista": 1190.00,
+      "descuento": 0.00,
+      "precio_final": 1190.00,
+      "indicaciones": "- PERFIL DE QUIMICAS, PROTEINAS SERICAS, PRUEBAS FUNCIONALES HEPATICAS, FOSFORO SERICO, SODIO SERICO, MAGNESIO SERICO (MG), POTASIO SERICO, HIERRO SERICO, GAMA GLUTAMIL TRANSFERASA SERICA (GGT), CLORUROS SERICOS, CALCIO SERICO:\nPresentarse en el laboratorio con un ayuno de 8 - 10 horas."
+    }
+  ],
+  "subtotal": 1440.00,
+  "descuento": 0.00,
+  "cargo": 0.00,
+  "total": 1440.00,
+  "nota_precios": "*Precios con IVA incluido"
+}

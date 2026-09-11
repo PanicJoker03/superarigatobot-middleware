@@ -1,0 +1,137 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Watson Assistant FastAPI Extension",
+        "version": "1.0.0",
+        "description": "Extension for sending a user message from Watson Assistant to a FastAPI service."
+    },
+    "servers": [
+        {
+            "url": "https://laboratorios-ramos-agent-fast-api.onrender.com"
+        }
+    ],
+    "paths": {
+        "/assistant": {
+            "get": {
+                "operationId": "sendUserMessage",
+                "summary": "User message",
+                "description": "Sends the user's message to the FastAPI service.",
+                "parameters": [
+                    {
+                        "name": "action",
+                        "in": "query",
+                        "required": true,
+                        "description": "User Action, ex. budget, info, etc",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "watson_session_id",
+                        "in": "query",
+                        "required": true,
+                        "description": "Watson Assistant session identifier.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "required": true,
+                        "description": "The message sent by the user.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                      "200": {
+                        "description": "Message successfully processed.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "response": {
+                                    "type": "string",
+                                    "description": "The assistant's reply text"
+                                    }
+                                },
+                                "required": ["response"]
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request."
+                    },
+                    "500": {
+                        "description": "FastAPI server error."
+                    }
+                }
+            }
+        },
+        "/quotation": {
+            "get": {
+                "operationId": "getQuotation",
+                "summary": "Get Quotation",
+                "description": "Get Quotation from FastAPI service.",
+                "parameters": [
+                    {
+                        "name": "action",
+                        "in": "query",
+                        "required": true,
+                        "description": "User Action, ex. budget, info, etc",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "watson_session_id",
+                        "in": "query",
+                        "required": true,
+                        "description": "Watson Assistant session identifier.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "required": true,
+                        "description": "The message sent by the user.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                      "200": {
+                        "description": "Message successfully processed.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "response": {
+                                    "type": "string",
+                                    "description": "The assistant's reply text"
+                                    }
+                                },
+                                "required": ["response"]
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request."
+                    },
+                    "500": {
+                        "description": "FastAPI server error."
+                    }
+                }
+            }
+        }
+    }
+}
